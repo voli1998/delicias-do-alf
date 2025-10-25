@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: delicias-do-alf-backend
+    env: node
+    region: oregon
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: JWT_SECRET
+        value: delicias-do-alf-chave-secreta
+      - key: DATABASE_URL
+        sync: false
